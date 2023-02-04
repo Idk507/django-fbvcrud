@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset = "utf-8">
+        <title> Students mark list </title>
+
+    </head>
+    <body>
+        <a href = "create/">Create data</a><br/>
+       <h1>Students :</h1>
+       <table border=2 >
+        <thead>
+            <th>Id</th>
+            <th>Subject</th>
+            <th>Date</th>
+       
+        </thead>
+        {% for i in students %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Subject}}</td>
+            <td>{{i.Date}}</td>
+            
+            <td><a href="delete/{{i.id}}">Delete</a></td>
+            <td><a href="update/{{i.id}}">Update</a></td>
+
+
+        </tr>
+        {% endfor %}
+       </table>
+       <a href = "/accounts/logout/">Logout</a>
+    </body>
+
+
+    </html>
